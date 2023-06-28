@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { PORT } from "../config.js";
 
-const root_index = Router();
+const router_principal = Router();
 
-root_index.get('/info', (req, res) => {
+router_principal.get('/info', (req, res) => {
     const base = `http://localhost:${PORT}`
     res.json({
         '/info': {
@@ -88,4 +88,4 @@ root_index.get('/info', (req, res) => {
     })
 })
 
-export default root_index;
+export default router_principal;
